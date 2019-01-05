@@ -18,5 +18,5 @@ class TareasForm(forms.ModelForm):
 		}
 		widgets = {
 		'nb_tarea': forms.TextInput(attrs={'class':'form-control'}),
-		'tx_descripcion': forms.TextInput(attrs={'class':'form-control'}),
+		'tx_descripcion': forms.Textarea(attrs={'class':'form-control'}),
 		}
