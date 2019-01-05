@@ -1,0 +1,17 @@
+Desarrollador Isaac Betancourt
+Cedula: 19.227.837
+Email: Isack330@hotmail.com
+
+Miniaplicacion realizada bajo el framework de python sin usa de javascript,
+solo se utilizó el puro manejador de Django para esta prueba.
+
+Base de datos
+
+Para crear la base de datos, la informacion solicitada son los estandares de postgres
+
+Nombre de la base de datos: Miniproyecto
+Contraseña: 123456
+Usuario: postgres
+
+Ejecutar el makemigrations y migrate y se obtendrá la tabla creada.
+

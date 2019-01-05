@@ -1,6 +1,0 @@
-Desarrollador Isaac Betancourt
-Cedula: 19.227.837
-Email: Isack330@hotmail.com
-
-Miniaplicacion realizada bajo el framework de python sin usa de javascript,
-solo se utilizó el puro manejador de Django para esta prueba.
