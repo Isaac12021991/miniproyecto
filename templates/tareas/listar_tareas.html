@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="row">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+	<h5>Tareas registradas en el miniproyecto</h5>
+ </div>
+
+
+</div>
+<table class="table table-bordered">
+	<thead>
+	<tr>
+		<th width="40%">Tarea</th>
+		<th width="30%">Descripcion</th>
+		<th width="20%">Estatus</th>
+		<th width="10%">Acciones</th>
+	</tr>
+	</thead>
+	<tbody>
+		{% if lista_tareas %}
+		{% for row in lista_tareas %}
+		<tr>
+			<td>{{ row.nb_tarea }}</td>
+			<td>{{ row.tx_descripcion }}</td>
+			{% if row.co_estatus == 1 %}
+			<td><label class="text text-info">Pendiente</label></td>
+			{% else %}
+			<td><label class="text text-success">Aprobado</label></td>
+			{% endif %}
+			{% if row.co_estatus == 1 %}
+			<td><a href="{% url 'tareas:nombre_aprobar_tareas' row.id%}" class="btn btn-success">Aprobar</a></td>
+			{% endif %}
+
+		</tr>
+		{% endfor %}
+		{% else %}
+
+		<h1>Sin registro de tareas</h1>
+
+		{% endif %}
+	</tbody>
+
+
+
+</table>
+
+{% endblock %}

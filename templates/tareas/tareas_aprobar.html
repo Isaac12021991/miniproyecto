@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<form method="post">
+	{% csrf_token %}
+
+	<h6>¿Desea aprobar esta tarea {{ info_tarea.nb_tarea }}?</h6>
+
+<button type="submit" class="btn btn-success">Si, Aprobar</button>
+<a class="btn default" href="{% url 'tareas:nombre_tareas_listar' %}">No, cancelar</a>	
+</form>
+
+
+{% endblock %}
