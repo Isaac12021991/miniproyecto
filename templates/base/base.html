@@ -9,12 +9,13 @@
 <body>
 	<div class="container">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="">Mini-proyecto</a>
+  <a class="navbar-brand" href="">Miniproyecto</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'admin:index' %}">Administracion <span class="sr-only"></span></a>
@@ -26,25 +27,22 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'tareas:nombre_tareas_form' %}">Nueva Tarea</a>
       </li>
-
-
     </ul>
+
   </div>
 </nav>
-	
-	<div class="container">		
-	<div class="row">
-		
 
+	<div class="container">
+	<div class="row">
 	{% block content %}
 	<h5>Bievenido a miniproyecto de prueba</h5>
 	</div>
 	<div class="row">
 	<ul>
-	<li>Framework: Django</li>
-	<li>Lenguajes: Python 3.5</li>
-	<li>Base de datos: Postgresql</li>
-	<li>Bootstrap 4.0</li>	
+		<li>Framework: Django</li>
+		<li>Lenguajes: Python 3.5</li>
+		<li>Base de datos: Postgresql</li>
+		<li>Bootstrap 4.0</li>
 	</ul>
 	{% endblock %}
 
