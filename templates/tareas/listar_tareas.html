@@ -1,18 +1,13 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-<div class="row">
- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-	<h5>Tareas registradas en el miniproyecto</h5>
-
- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-
+ 	<h4 class="mt-5">Lista de todas las tareas actuales y su estatus</h4>
 {% if lista_tareas %}
-<table class="table table-bordered" width="100%">
-	<thead>
+<table class="table table-bordered table-hover table-sm" width="100%">
+	<thead class="thead-dark">
 	<tr>
-		<th width="40%">Tarea</th>
-		<th width="30%">Descripcion</th>
+		<th width="40%">Tareas</th>
+		<th width="30%">Descripción</th>
 		<th width="20%">Estatus</th>
 		<th width="10%">Acciones</th>
 	</tr>
@@ -43,8 +38,6 @@
 
 		{% endif %}
 
-	</div>
-</div>
-</div>
+
 
 {% endblock %}

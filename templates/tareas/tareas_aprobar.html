@@ -2,14 +2,15 @@
 
 {% block content %}
 
-<form method="post">
-	{% csrf_token %}
+	<h4 class="mt-5">Aprobar tarea</h4>
 
-	<h6>¿Desea aprobar esta tarea {{ info_tarea.nb_tarea }}?</h6>
+	<form method="post">
+		{% csrf_token %}
+		<h6>¿Desea aprobar esta tarea {{ info_tarea.nb_tarea }}?</h6>
 
-<button type="submit" class="btn btn-success">Si, Aprobar</button>
-<a class="btn default" href="{% url 'tareas:nombre_tareas_listar' %}">No, cancelar</a>	
-</form>
+		<button type="submit" class="btn btn-success">Si, Aprobar</button>
+		<a class="btn default" href="{% url 'tareas:nombre_tareas_listar' %}">No, cancelar</a>	
+	</form>
 
 
 {% endblock %}

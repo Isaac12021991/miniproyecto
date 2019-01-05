@@ -6,58 +6,61 @@
 	<meta charset="utf-8">
 	<title>{% block title %} Mini proyecto Tareas {% endblock %}</title>
 </head>
-<body>
-	<div class="container">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="">Miniproyecto</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <body class="d-flex flex-column h-100">
+    <header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Mini proyecto</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'admin:index' %}">Administracion de Django </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'tareas:nombre_tareas_listar' %}">Tareas </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'tareas:nombre_tareas_form' %}">Nueva Tarea </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'admin:index' %}">Administracion <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'tareas:nombre_tareas_listar' %}">Todas las tareas</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'tareas:nombre_tareas_form' %}">Nueva Tarea</a>
-      </li>
-    </ul>
+<main role="main" class="flex-shrink-0" style="margin-top:2%">
+  <div class="container">
 
-  </div>
-</nav>
+  	{% block content %}
+    <h4 class="mt-5">Bievenido a miniproyecto de prueba</h4>
+    <p class="lead">Bienvenido al miniproyecto de prueba realizado por Isaac Betancourt.</p>
+    <p>Relizado bajo las tecnologías:</p>
 
-	<div class="container">
-	<div class="row">
-	{% block content %}
-	<h5>Bievenido a miniproyecto de prueba</h5>
-	</div>
-	<div class="row">
-	<ul>
-		<li>Framework: Django</li>
-		<li>Lenguajes: Python 3.5</li>
-		<li>Base de datos: Postgresql</li>
-		<li>Bootstrap 4.0</li>
+    <ul>
+		<li>Framework:  <code>Django</code> </li>
+		<li>Lenguajes: <code>Python 3.5</code> </li>
+		<li>Base de datos: <code>Postgresql</code> </li>
+		<li>Plantilla de diseño: <code>Bootstrap 4.0</code></li>
 	</ul>
-
-	<p>Miniaplicación realizada bajo el framework de Django sin usa de javascript,
-	solo se utilizó el puro manejador y recurso de Django para esta prueba.</p>
-	{% endblock %}
-
-		</div>
-	</div>
-
-	<footer>
-		<small>Mini aplicacion de prueba sencilla desarrollada por Isaac Betancourt.</small>
-	</footer>
+    
+   {% endblock %}
+  </div>
+</main>
 
 
-	</div>
+
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">Miniaplicación realizada bajo el framework de Django sin usa de javascript,
+	solo se utilizó el puro manejador y recursos de Django para esta prueba.</span>
+  </div>
+</footer>
+
 
 </body>
 </html>
