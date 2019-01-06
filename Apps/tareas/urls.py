@@ -1,5 +1,11 @@
 from django.conf.urls import url, include
+
+''' Importa todas las vistas a utilizar desde el views.py, es decir todas las funciones que se encuentran en ella  '''
+
 from Apps.tareas.views import index, tareas_view, tareas_lista_view, tareas_aprobar
+
+
+''' Establecemos todas las urls disponibles para la Apps Tareas  '''
 
 urlpatterns = [
     url(r'^$', index, name='index'),
